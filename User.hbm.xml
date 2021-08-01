@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-18 10:42:45 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+<!-- name 持久化类的类名，table 数据表的表名，MySQL不区分大小写 -->  
+    <class name="entity.User" table="user">
+        <id name="id" type="int">
+            <column name="USER_ID" />
+            <generator class="native" />
+        </id>
+         <!-- 映射User类的name属性 -->  
+        <property name="name" type="java.lang.String">
+            <column name="NAME" length="20"/>
+        </property>
+         <!-- 映射User类的password属性 -->  
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" length="12"/>
+        </property>
+         <!-- 映射User类的type属性 -->  
+        <property name="type" type="java.lang.String">
+            <column name="TYPE" length="6"/>
+        </property>
+    </class>
+</hibernate-mapping>
