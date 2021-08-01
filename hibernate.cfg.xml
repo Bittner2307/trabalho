@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<!-- 数据库的JDBC驱动 -->  
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>        
+        <!-- 数据库的URL -->  
+        <property name="hibernate.connection.url">jdbc:mysql://loaclhost:3306/ClassroomDB</property>
+ 		<!-- 数据库的用户名和密码 -->        
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">123</property>
+        <!-- 数据库的方言 -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    	<!-- Hibernate自动根据映射文件创建或者更新数据表 -->  
+        <property name="hibernate.hbm2ddl.auto">update</property>  
+        <!-- 在控制台输出运行时生成的SQL语句，方便调试 -->  
+        <property name="show_sql">true</property>  
+        <!-- 连接池大小 -->  
+        <property name="connection.pool_size">1</property>  
+        <!-- 列出所有映射文件 -->  
+        <mapping resource="entity/User.hbm.xml" />  
+    </session-factory>
+</hibernate-configuration>
